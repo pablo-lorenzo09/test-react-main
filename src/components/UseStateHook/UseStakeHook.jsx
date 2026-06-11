@@ -27,7 +27,7 @@ function UseStateHook () {
             <p>Idade:{idade}</p>
             <button onClick={atualizarIdade}>Incrementar</button>
 
-            <p>É Falso: {eFalso ? 'SIM':'NAO'}</p>
+            <p>É Falso: {eFalso ? 'NAO':'SIM'}</p>
             <button onClick={verificarEstado}>Verificar</button>
         </div>
     )
