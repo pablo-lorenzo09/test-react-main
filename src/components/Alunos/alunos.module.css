@@ -1,0 +1,8 @@
+.lista{
+    padding: 10px;
+    border: 1px solid red;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
