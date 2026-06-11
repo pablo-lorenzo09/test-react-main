@@ -1,4 +1,4 @@
-import styles from "./msgUsuario.module.css"
+import styles from "./MsgUsuario.module.css"
 
 function MsgUsuario({autenticado=false, nomeUsuario}){
     // if (autenticado === true){
@@ -11,9 +11,16 @@ function MsgUsuario({autenticado=false, nomeUsuario}){
     //         );
     // }
 
-    return(autenticado ? <h1 className = {styles.autenticado}>Bem vindo, {nomeUsuario}</h1>:
-        <h1 className={styles['nao-autenticado']}> Usuário nao logado </h1>
-    )
+    // return(autenticado ? <h1 className = {styles.autenticado}>Bem vindo, {nomeUsuario}</h1>:
+    //     <h1 className={styles.naoAutenticado}> Usuário nao logado.</h1>
+    // )
+
+    const msgAutenticado = <h1 className = {styles.autenticado}>Bem vindo, {nomeUsuario}</h1>
+    const msgNautenticado = <h1 className={styles.naoAutenticado}> Usuário nao logado.</h1>
+
+    return(autenticado ? msgAutenticado:
+    msgNautenticado
+)
 }
 
 export default MsgUsuario
