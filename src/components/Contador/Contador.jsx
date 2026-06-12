@@ -1,11 +1,38 @@
+import styles from "./contador.module.css"
 import { useState } from "react"
 
-function Contador (){
-    return(
-        <h1>Aqui vai ser o contador</h1>
-        <button>ADD</button>
-        <button>REMOVER</button>
-        <button>REINICIAR</button>
+function Contador() {
+    const [numero, setNumero] = useState(0);
+
+    const somarNumero = () =>{
+        setNumero(numero + 1)
+    }
+
+    const subtrairNumero = () =>{
+        setNumero(numero - 1)
+    }
+
+    const zerarNumero = () =>{
+        setNumero(0)
+    }
+
+    const sortearNumero = () =>{
+        setNumero(Math.floor(Math.random() * 50))
+    }
+    return (
+        
+        <>
+        
+            <h1 style={{color: numero==0? 'blue' : numero > 0? 'green' : 'red'}}>{numero}</h1>
+
+            <button onClick={zerarNumero}>↩</button>
+
+            <button onClick={somarNumero}>+</button>
+
+            <button onClick={subtrairNumero}>-</button>
+
+            <button onClick={sortearNumero}>Sorteio</button>
+        </>
     )
 }
 
