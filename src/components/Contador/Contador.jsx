@@ -23,7 +23,7 @@ function Contador() {
         
         <>
         
-            <h1 style={{color: numero==0? 'blue' : numero > 0? 'green' : 'red'}}>{numero}</h1>
+            <h1 style={{color: numero==0? 'blue' : numero > 0? 'green' : 'red'}}>{(numero > 0 && numero < 10) || (numero == 0) ?'0'+ numero : numero}</h1>
 
             <button onClick={zerarNumero}>↩</button>
 
@@ -37,3 +37,5 @@ function Contador() {
 }
 
 export default Contador
+
+// 
