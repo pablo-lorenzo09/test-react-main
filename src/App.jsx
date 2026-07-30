@@ -4,6 +4,7 @@ import Button from './components/Button/Button.jsx'
 import Lista from './components/Lista/Lista.jsx'
 import MsgUsuario from './components/MensagemUsuario/MsgUsuario.jsx'
 import UseStateHook from './components/UseStateHook/UseStakeHook.jsx'
+import UseEffectHook from './components/UseEffectHook/UseEffectHook.jsx'
 import Contador from './components/Contador/Contador.jsx'
 
 
@@ -15,7 +16,8 @@ function App() {
 
   return (
     <>
-      <Contador/>
+      {/* <Contador/> */}
+      <UseEffectHook/>
     </>
   )
 }

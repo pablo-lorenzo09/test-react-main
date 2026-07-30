@@ -17,7 +17,7 @@ function Contador() {
     }
 
     const sortearNumero = () =>{
-        setNumero(Math.floor(Math.random() * 50))
+        setNumero(Math.floor(Math.random() * 100))
     }
     return (
         
@@ -32,6 +32,8 @@ function Contador() {
             <button onClick={subtrairNumero}>-</button>
 
             <button onClick={sortearNumero}>Sorteio</button>
+
+            <button >Automático</button>
         </>
     )
 }
