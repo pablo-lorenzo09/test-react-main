@@ -8,7 +8,18 @@ function ContadorAuto() {
     const [automatico, setAutomatico] = useState(false)
     // Efeito que monitroa o estado "automatico"
     useEffect(() => {
-        
+        let relogio;
+
+        if(automatico) {
+            // se estive ativo, cria um intervalo que aumenta o contador a cada 1 segundo (1000ms)
+            relogio = setInterval(() => {
+            // Importante: usamos a função de callback (c => c + 1) para pegar sempre o valor mais recente
+            setNumero((valorAtual) => valorAtual + 1);
+        },1000);
+    }
+
+        // Função de limpeza: desliga o relógio quando o automático é desativado ou o componente desmonta
+        return () => clearInterval(relogio);
     }, [automatico]);
 
     const alternarAutomatico = () => {
@@ -24,7 +35,8 @@ function ContadorAuto() {
     }
 
     const zerarNumero = () =>{
-        setNumero(0)
+        setNumero(0);
+        setAutomatico(false);
     }
 
     const sortearNumero = () =>{
@@ -44,7 +56,7 @@ function ContadorAuto() {
 
             <button onClick={sortearNumero}>Sorteio</button>
 
-            <button >Automático</button>
+            <button onClick={alternarAutomatico}>Automático</button>
         </>
     )
 }
