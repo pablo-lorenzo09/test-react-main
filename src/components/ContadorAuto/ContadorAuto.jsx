@@ -56,7 +56,7 @@ function ContadorAuto() {
 
             <button onClick={sortearNumero}>Sorteio</button>
 
-            <button onClick={alternarAutomatico}>Automático</button>
+            <button style={{background: automatico? 'red' : 'green'}} onClick={alternarAutomatico}>{automatico? 'Parar' : 'Automático'}</button>
         </>
     )
 }
