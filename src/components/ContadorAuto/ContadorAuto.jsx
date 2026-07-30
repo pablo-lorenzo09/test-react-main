@@ -1,8 +1,19 @@
-import styles from "./contador.module.css"
-import { useState } from "react"
+import styles from "./ContadorAuto.module.css"
+import { useEffect, useState } from "react"
 
-function Contador() {
+function ContadorAuto() {
+    // 
     const [numero, setNumero] = useState(0);
+    // 
+    const [automatico, setAutomatico] = useState(false)
+    // Efeito que monitroa o estado "automatico"
+    useEffect(() => {
+        
+    }, [automatico]);
+
+    const alternarAutomatico = () => {
+        setAutomatico(!automatico);
+    }
 
     const somarNumero = () =>{
         setNumero(numero + 1)
@@ -33,10 +44,9 @@ function Contador() {
 
             <button onClick={sortearNumero}>Sorteio</button>
 
+            <button >Automático</button>
         </>
     )
 }
 
-export default Contador
-
-// 
+export default ContadorAuto

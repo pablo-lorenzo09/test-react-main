@@ -18,9 +18,13 @@ function useEffectHook(){
     },[]);
 
         useEffect(() => {
-
+            console.log('Ocorre quando renderizar o contar')
     },[contar]);
 
+    // # 
+        useEffect(() => {
+            document.title = titulo + contar
+    },[contar]);
 
     return <button 
     onClick={() => setContar(contar + 1)}>

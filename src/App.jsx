@@ -9,6 +9,7 @@ import Contador from './components/Contador/Contador.jsx'
 
 
 import './App.css'
+import ContadorAuto from './components/ContadorAuto/ContadorAuto.jsx'
 
 
 
@@ -16,8 +17,8 @@ function App() {
 
   return (
     <>
-      {/* <Contador/> */}
-      <UseEffectHook/>
+      <ContadorAuto/>
+      {/* <UseEffectHook/> */}
     </>
   )
 }
