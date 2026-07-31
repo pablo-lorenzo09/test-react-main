@@ -49,10 +49,10 @@ function Tema() {
         {/* Caso 1: Contador */}
         <section className={styles.card}>
             <h1>Contador</h1>
-            <p className={styles.valor}>0</p>
+            <p className={styles.valor}>{contador}</p>
             <div className={styles.botoes}>
-                <button>+</button>
-                <button>-</button>
+                <button onClick={aumentarContador}>+</button>
+                <button onClick={diminuirContador}>-</button>
             </div>
             
             <p>O useEffect observa a variável <strong>contador</strong> e executa sempre que ela muda.</p>
