@@ -6,10 +6,12 @@
 // import UseStateHook from './components/UseStateHook/UseStakeHook.jsx'
 // import UseEffectHook from './components/UseEffectHook/UseEffectHook.jsx'
 // import Contador from './components/Contador/Contador.jsx'
-import Tema from './components/Tema/Tema.jsx'
-
+// import Tema from './components/Tema/Tema.jsx'
+// import ContadorAuto from './components/ContadorAuto/ContadorAuto.jsx'
+import ConsultaApi from './components/ConsultaApiBtn/ConsultaApi.jsx'
 import './App.css'
-import ContadorAuto from './components/ContadorAuto/ContadorAuto.jsx'
+import ConsultaApiBtnSA from './components/ConsultaApiBtn/ConsultaApiBtnSA.jsx'
+
 
 
 
@@ -17,10 +19,9 @@ function App() {
 
   return (
     <>
-      <Tema/>
-      {/* <ContadorAuto/> */}
+      <ConsultaApiBtnSA/>
     </>
   )
 }
 
-export default App
+export default App  
