@@ -25,7 +25,7 @@ export default function ConsultaApiBtn() {
                     Swal.showLoading()
                 },
             })
-            const resposta = await fetch("https://httpbin.org/status/401")
+            const resposta = await fetch("https://jsonplaceholder.typicode.com/users")
             console.log(resposta)
 
             if (!resposta.ok) {
@@ -74,12 +74,16 @@ export default function ConsultaApiBtn() {
         catch (error) {
             console.log(error.message)
             // 
-            if (error.message === "Failed to fetch" || !navigator.onLine) {
-                setErro("Não foi possível conectar ao servidor. Verifique sua internet.");
+             if (erro.message === "Failed to fetch" || !navigation.onLine) {
                 Swal.fire({
                     title: "Falha na Conexão",
                     text: "Não foi possível conectar ao servidor. Verifique sua internet.",
-                    icon: "question"
+                    icon: "question",
+                    showCancelButton: true,
+                    confirmButtonText: "Tentar Novamente",
+                    cancelButtonText: "Ok"
+                }).then((result) => {
+                    if (result.isConfirmed) buscarUsuarios();
                 });
                 // 
             } else {
