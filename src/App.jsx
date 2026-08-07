@@ -8,9 +8,9 @@
 // import Contador from './components/Contador/Contador.jsx'
 // import Tema from './components/Tema/Tema.jsx'
 // import ContadorAuto from './components/ContadorAuto/ContadorAuto.jsx'
-import ConsultaApi from './components/ConsultaApiBtn/ConsultaApi.jsx'
+// import ConsultaApi from './components/ConsultaApiBtn/ConsultaApi.jsx'
 import './App.css'
-import ConsultaApiBtnSA from './components/ConsultaApiBtn/ConsultaApiBtnSA.jsx'
+import ConsultaApi from './components/ConsultaApiBtn/ConsultaApiBtnSA.jsx'
 
 
 
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <ConsultaApiBtnSA/>
+      <ConsultaApi/>
     </>
   )
 }
