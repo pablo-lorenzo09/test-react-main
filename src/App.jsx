@@ -11,6 +11,8 @@
 // import ConsultaApi from './components/ConsultaApiBtn/ConsultaApi.jsx'
 import './App.css'
 import ConsultaApi from './components/ConsultaApiBtn/ConsultaApiBtnSA.jsx'
+import Consulta from './components/Produtos/Consulta.jsx'
+import Produto from './components/Produtos/Produto.jsx'
 
 
 
@@ -19,7 +21,8 @@ function App() {
 
   return (
     <>
-      <ConsultaApi/>
+      <Consulta/>
+      <Produto/>
     </>
   )
 }
